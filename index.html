@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sportowe Świry — Ruch to zdrowie</title>
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body { margin: 0; padding: 24px; background: #101711; color: #f4f6f0; font: 20px/1.5 Arial, sans-serif; }
+    .top, main, footer { width: min(1180px, 100%); margin: 0 auto; }
+    .top { padding: 26px 20px; text-align: center; }
+    .logo { width: 92px; height: 92px; }
+    h1 { margin: 6px 0; color: #c9ff52; font-size: clamp(36px, 5vw, 58px); letter-spacing: 2px; }
+    .podtytul { margin: 0 0 18px; color: #d5dfd1; font-size: 22px; }
+    nav { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    nav a { padding: 8px 16px; border: 1px solid #506047; border-radius: 24px; color: white; text-decoration: none; }
+    nav a:hover { border-color: #c9ff52; color: #c9ff52; }
+    .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 30px; align-items: center; padding: 42px; border-radius: 28px; background: linear-gradient(130deg, #203323, #314b32); }
+    .etykieta { color: #c9ff52; font-size: 15px; font-weight: bold; letter-spacing: 3px; }
+    .hero h2 { margin: 8px 0 12px; font-size: clamp(38px, 5vw, 60px); line-height: 1.08; }
+    .hero p:not(.etykieta) { color: #e1e8de; }
+    .przycisk { display: inline-block; margin-top: 14px; padding: 13px 20px; border-radius: 28px; background: #c9ff52; color: #142014; font-weight: bold; text-decoration: none; }
+    .ilustracja { position: relative; display: flex; justify-content: center; align-items: center; min-height: 270px; border: 2px solid #627754; border-radius: 50%; background: radial-gradient(circle, #496442, #213322 72%); font-size: 82px; }
+    .ilustracja strong { position: absolute; right: -8px; bottom: 8px; padding: 12px 16px; transform: rotate(-6deg); border-radius: 12px; background: #c9ff52; color: #142014; font-size: 16px; text-align: center; }
+    .sekcja { padding: 52px 8px 10px; text-align: center; }
+    .sekcja h2 { margin: 4px 0 18px; font-size: 38px; }
+    .karty { display: grid; gap: 18px; }
+    .trzy { grid-template-columns: repeat(3, 1fr); }
+    .cztery { grid-template-columns: repeat(4, 1fr); }
+    .karta { padding: 22px; border: 1px solid #43523d; border-radius: 20px; background: #1b261c; }
+    .karta > span { font-size: 46px; }
+    .karta h3 { margin: 8px 0; color: #c9ff52; font-size: 24px; }
+    .karta p, .jasny { color: #d5dfd1; }
+    .kafelek { width: 100%; color: white; font: inherit; text-align: center; cursor: pointer; transition: transform .2s, border-color .2s; }
+    .kafelek:hover, .kafelek.aktywna { transform: translateY(-5px); border-color: #c9ff52; }
+    .opis-aktywnosci { max-width: 800px; margin: 24px auto 0; padding: 22px; border: 1px solid #526047; border-left: 6px solid #c9ff52; border-radius: 18px; background: #202c21; text-align: left; }
+    .opis-aktywnosci h3 { margin-top: 0; color: #c9ff52; }
+    .opis-aktywnosci[hidden] { display: none; }
+    .haslo { margin: 50px 0 20px; padding: 28px; border-left: 7px solid #c9ff52; border-radius: 16px; background: #203323; text-align: center; font-size: 24px; }
+    .haslo strong { color: #c9ff52; }
+    footer { padding: 24px 10px 36px; color: #d5dfd1; text-align: center; }
+    @media (max-width: 760px) { body { padding: 12px; } .hero { grid-template-columns: 1fr; padding: 26px; } .ilustracja { min-height: 220px; font-size: 68px; } .trzy, .cztery { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .trzy, .cztery { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="top" id="start">
+    <svg class="logo" viewBox="0 0 200 200" role="img" aria-label="Uśmiechnięta buźka">
+      <circle cx="100" cy="100" r="94" fill="#d000c9"/>
+      <path d="M57 57 Q45 72 43 91 M145 63 Q132 76 125 91" fill="none" stroke="#17121a" stroke-width="12" stroke-linecap="round"/>
+      <path d="M42 119 Q67 159 112 157 Q139 157 153 132" fill="none" stroke="#17121a" stroke-width="12" stroke-linecap="round"/>
+    </svg>
+    <h1>SPORTOWE ŚWIRY</h1>
+    <p class="podtytul">Ruch to zdrowie — nie ma wieku na aktywność!</p>
+    <nav><a href="#korzysci">Korzyści</a><a href="#aktywnosci">Aktywności</a><a href="#ekipa">Nasza ekipa</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="etykieta">SENIORZE, ZADBAJ O SIEBIE!</p>
+        <h2>Na ruch nigdy nie jest za późno!</h2>
+        <p>Czy po 60. roku życia sport jest już nie dla was? Nic bardziej mylnego! Warto zadbać o swoje zdrowie i samopoczucie.</p>
+        <p>Nie trzeba od razu biegać maratonów. Wystarczy spacer, rower, pływanie albo taniec przy ulubionej muzyce.</p>
+        <a class="przycisk" href="#aktywnosci">Wybierz swój ruch ↓</a>
+      </div>
+      <div class="ilustracja" aria-label="Spacerujący seniorzy"><span>🚶‍♀️</span><span>🚶‍♂️</span><strong>MAŁE KROKI<br>WIELKIE EFEKTY</strong></div>
+    </section>
+
+    <section class="sekcja" id="korzysci">
+      <p class="etykieta">RUSZAJ SIĘ DLA SIEBIE</p><h2>Dlaczego warto?</h2>
+      <div class="karty trzy">
+        <article class="karta"><span>❤️</span><h3>Zdrowie</h3><p>Ruch wspiera serce i krążenie.</p></article>
+        <article class="karta"><span>⚡</span><h3>Więcej energii</h3><p>Aktywność pomaga zachować sprawność.</p></article>
+        <article class="karta"><span>😊</span><h3>Dobry nastrój</h3><p>Ruch może poprawić samopoczucie i zmniejszyć stres.</p></article>
+      </div>
+    </section>
+
+    <section class="sekcja" id="aktywnosci">
+      <p class="etykieta">WYBIERZ COŚ DLA SIEBIE</p><h2>Każdy ruch się liczy</h2>
+      <p class="jasny">Kliknij kafelek, żeby zobaczyć pomysł. Kliknij ponownie, aby go zamknąć.</p>
+      <div class="karty cztery">
+        <button class="karta kafelek" data-aktywnosc="spacer"><span>🚶</span><h3>Spacerowe wyzwanie</h3><p>Kliknij, aby zobaczyć</p></button>
+        <button class="karta kafelek" data-aktywnosc="plywanie"><span>🏊</span><h3>Pływanie</h3><p>Kliknij, aby zobaczyć</p></button>
+        <button class="karta kafelek" data-aktywnosc="rower"><span>🚲</span><h3>Rower</h3><p>Kliknij, aby zobaczyć</p></button>
+        <button class="karta kafelek" data-aktywnosc="taniec"><span>💃</span><h3>Taniec</h3><p>Kliknij, aby zobaczyć</p></button>
+      </div>
+      <div id="opis-aktywnosci" class="opis-aktywnosci" aria-live="polite" hidden></div>
+    </section>
+
+    <section class="haslo"><p>Nie musisz od razu biegać maratonów. Wybierz to, co lubisz!</p><strong>Wystarczy zacząć od małych rzeczy — każdy krok się liczy.</strong></section>
+  </main>
+
+  <footer id="ekipa"><p class="etykieta">NASZA EKIPA</p><p>Kuba Prościński • Aleksandra Krawczyk • Amelia Piłat • Filip Goldsztejn • Jan Strug</p></footer>
+
+  <script>
+    const opisy = {
+      spacer: "<h3>🚶 Spacerowe wyzwanie</h3><p>Wybierz spokojną trasę i idź we własnym tempie. Po drodze zauważ trzy miłe rzeczy. Możesz zaprosić kogoś na wspólny spacer.</p>",
+      plywanie: "<h3>🏊 Pływanie</h3><p>Wybierz spokojne tempo i aktywność w wodzie, która jest dla ciebie wygodna.</p>",
+      rower: "<h3>🚲 Rower</h3><p>Wybierz trasę i tempo odpowiednie dla siebie. Możesz zacząć od krótkiej przejażdżki.</p>",
+      taniec: "<h3>💃 Prosty układ taneczny</h3><ol><li>Maszeruj delikatnie w miejscu.</li><li>Zrób krok w bok i dostaw drugą stopę. Powtórz w drugą stronę.</li><li>Dodaj spokojne ruchy rąk albo klaśnięcie.</li><li>Powtarzaj przy ulubionej muzyce, we własnym tempie.</li></ol>"
+    };
+    const sekcja = document.getElementById("aktywnosci");
+    const pole = document.getElementById("opis-aktywnosci");
+    sekcja.addEventListener("click", function (zdarzenie) {
+      const kafelek = zdarzenie.target.closest("button[data-aktywnosc]");
+      if (!kafelek) return;
+      const aktywnosc = kafelek.dataset.aktywnosc;
+      const tenSam = pole.dataset.aktywnosc === aktywnosc && !pole.hidden;
+      sekcja.querySelectorAll(".kafelek").forEach(function (element) { element.classList.remove("aktywna"); });
+      if (tenSam) { pole.hidden = true; pole.innerHTML = ""; delete pole.dataset.aktywnosc; return; }
+      pole.innerHTML = opisy[aktywnosc];
+      pole.dataset.aktywnosc = aktywnosc;
+      pole.hidden = false;
+      kafelek.classList.add("aktywna");
+    });
+  </script>
+</body>
+</html>
